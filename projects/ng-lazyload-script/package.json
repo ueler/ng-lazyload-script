@@ -1,8 +1,8 @@
 {
   "name": "@ueler/ng-lazyload-script",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "peerDependencies": {
-    "@angular/core": ">=7.0.0",
+    "@angular/core": ">=8.0.0",
     "rxjs": ">=6.0.0"
   },
   "description": "Load external javascript libraries/files (e.g. Google Maps JavaScript API, Stripe JavaScript API, ...) in your components and services on the fly (when you need them) and execute code as soon as it's loaded.",
