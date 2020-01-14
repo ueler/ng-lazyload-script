@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ng-lazy-script-example'`, () => {
+  it(`should have as title 'ng-lazyload-script-example'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ng-lazy-script-example');
+    expect(app.title).toEqual('ng-lazyload-script-example');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ng-lazy-script-example app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('ng-lazyload-script-example app is running!');
   });
 });

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgLazyScriptService} from '../../../ng-lazy-script/src/public-api';
+import {NgLazyloadScriptService} from '../../../ng-lazyload-script/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import {NgLazyScriptService} from '../../../ng-lazy-script/src/public-api';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private ngLazyScriptService: NgLazyScriptService) {
+  constructor(private ngLazyScriptService: NgLazyloadScriptService) {
   }
 
   ngOnInit() {

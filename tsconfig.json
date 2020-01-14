@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "ng-lazy-script": [
-        "dist/ng-lazy-script"
+      "ng-lazyload-script": [
+        "dist/ng-lazyload-script"
       ],
-      "ng-lazy-script/*": [
-        "dist/ng-lazy-script/*"
+      "ng-lazyload-script/*": [
+        "dist/ng-lazyload-script/*"
       ]
     }
   },

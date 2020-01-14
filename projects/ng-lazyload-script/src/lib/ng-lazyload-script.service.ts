@@ -1,14 +1,13 @@
-import {Inject, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable, ReplaySubject} from 'rxjs';
-import {DOCUMENT} from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
-export class NgLazyScriptService {
+export class NgLazyloadScriptService {
   private readonly loadedLibraries: { [url: string]: ReplaySubject<{}> } = {};
 
-  constructor(@Inject(DOCUMENT) private readonly document: Document) {
+  constructor() {
   }
 
   loadScript(url: string): Observable<{}> {
@@ -18,7 +17,7 @@ export class NgLazyScriptService {
 
     this.loadedLibraries[url] = new ReplaySubject();
 
-    const script = this.document.createElement('script');
+    const script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = url;
     script.onload = () => {
@@ -26,8 +25,12 @@ export class NgLazyScriptService {
       this.loadedLibraries[url].next();
       this.loadedLibraries[url].complete();
     };
+    script.onerror = () => {
+      this.loadedLibraries[url].error('Could not load script ' + url);
+      this.loadedLibraries[url].complete();
+    };
 
-    this.document.body.appendChild(script);
+    document.body.appendChild(script);
 
     return this.loadedLibraries[url].asObservable();
   }
