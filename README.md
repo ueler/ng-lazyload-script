@@ -48,5 +48,9 @@ this.ngLazyloadScriptService.loadScript('https://js.stripe.com/v3/').subscribe((
 });
 ```
 
-## Compatibility
+## Angular compatibility
 The library works with Angular versions ``>=8.0.0``.
+
+## Browser compatibility
+Works in all modern browsers if the ``browserlist`` file in your Angular project is configured appropriately.  
+Tested successfully in IE11, Edge, Chrome and Firefox.
