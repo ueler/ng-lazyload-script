@@ -29,9 +29,6 @@ Using npm:
 npm i --save @ueler/ng-lazyload-script
 ```
 
-## How does it work?
-The service creates a ``<script>`` tag with the provided source url and appends it to the document body.
-
 ## Usage
 1\. Inject the service into your own service or component:
 ```
@@ -49,7 +46,6 @@ this.ngLazyloadScriptService.loadScript('URL_TO_JAVASCRIPT_FILE').subscribe(() =
 });
 ```
 
-
 ## Example
 It can be used to load the Stripe Javscript API (https://stripe.com/docs/js):
 ```
@@ -62,6 +58,9 @@ this.ngLazyloadScriptService.loadScript('https://js.stripe.com/v3/').subscribe((
   // ...
 });
 ```
+
+## How does it work?
+The service creates a ``<script>`` tag with the provided source url and appends it to the document body.
 
 ## Angular compatibility
 The library works with Angular versions ``>=8.0.0``.
