@@ -3,16 +3,31 @@
 
 Load external javascript libraries/files (e.g. Google Maps JavaScript API, Stripe JavaScript API, ...) in your components and services on the fly (when you need them) and execute code as soon as it's loaded.
 
+## Introduction
+There are mainly two options to include a javascript library into your Angular project:
+- Add it via the package manager ``npm``
+- Include it in your ``index.html`` file
+
+However, sometimes
+- You don't want to include it upfront in your application to reduce size 
+and thus initial loading time of your application. 
+- An appropriate ``npm`` package does not exist and you 
+don't want to add the library to ``index.html``.
+
+
+🌟 This library provides a service to lazy load javascript libraries when you need them, 
+one a component and service basis.
+
+#### Features
+- Provides an Angular service to load javascript files.   
+- The service loads each library only once, i.e. remembers which libraries were already loaded.
+- You can subscribe to the returned observable to execute code relying on the lazy loaded script.
+
 ## Installation
 Using npm:
 ```
 npm i --save @ueler/ng-lazyload-script
 ```
-
-## Features
-- Provides an Angular service to load javascript files.   
-- The service loads each library only once, i.e. remembers which libraries were already loaded.
-- You can subscribe to the returned observable to execute code relying on the lazy loaded script.
 
 ## How does it work?
 The service creates a ``<script>`` tag with the provided source url and appends it to the document body.
