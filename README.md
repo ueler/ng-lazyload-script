@@ -15,10 +15,10 @@ and thus initial loading time of your application.
 don't want to add the library to ``index.html``.
 
 
-🌟 This library provides a service to lazy load javascript libraries when you need them, 
-one a component and service basis.
+**This library provides a service to lazy load javascript libraries when you need them, 
+one a component and service basis.**
 
-#### Features
+### Features
 - Provides an Angular service to load javascript files.   
 - The service loads each library only once, i.e. remembers which libraries were already loaded.
 - You can subscribe to the returned observable to execute code relying on the lazy loaded script.
