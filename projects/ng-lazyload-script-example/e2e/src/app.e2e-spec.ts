@@ -1,16 +1,25 @@
-import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import {AppPage} from './app.po';
+import {browser, ExpectedConditions, logging} from 'protractor';
 
-describe('workspace-project App', () => {
+describe('example app', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should eventually change text', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('ng-lazyload-script-example app is running!');
+
+    expect(page.getTextBox().getText()).toEqual('A new text should appear here...');
+
+    page.clickButton();
+
+    browser.wait(
+      ExpectedConditions.textToBePresentInElement(
+        page.getTextBox(),
+        'A new text (set by text changer util which was lazy loaded)'),
+      10000);
   });
 
   afterEach(async () => {

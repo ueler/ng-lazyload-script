@@ -12,13 +12,14 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Load the external script on the fly
-    this.ngLazyScriptService.loadScript('http://ng-lazy-script.uapps.ch/example-script.js').subscribe(() => {
-      const colorUtil = new ColorUtil('red-box');
-      colorUtil.changeBackgroundColor('red');
-    });
   }
 
+  loadScript() {
+    // Load the external script on the fly
+    this.ngLazyScriptService.loadScript('http://ng-lazy-script.uapps.ch/text-changer-util.js').subscribe(() => {
+      const textChangerUtil = new TextChangerUtil('text-box');
+      textChangerUtil.changeText('A new text (set by text changer util which was lazy loaded)');
+    });
+  }
 }
-
 

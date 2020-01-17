@@ -1,11 +1,15 @@
-import { browser, by, element } from 'protractor';
+import { browser, by, element, WebElementPromise } from 'protractor';
 
 export class AppPage {
   navigateTo() {
     return browser.get(browser.baseUrl) as Promise<any>;
   }
 
-  getTitleText() {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+  getTextBox() {
+    return element(by.id('text-box'));
+  }
+
+  clickButton() {
+    return element(by.id('button')).click();
   }
 }

@@ -2,6 +2,20 @@
   NgLazyScript Example Application
 </h1>
 
-<div id="red-box">
-  This box should eventually get a red background.
-</div>
+<h2>
+  Text box
+</h2>
+<p id="text-box">
+  A new text should appear here...
+</p>
+
+<h2>
+  Lazy load script button
+</h2>
+<p>
+  As soon as this button is clicked, an external script is loaded on the fly and the loaded
+  library is used to change the text of the text box.
+</p>
+<button type="button" id="button" (click)="loadScript()">
+  Load script and change text
+</button>
