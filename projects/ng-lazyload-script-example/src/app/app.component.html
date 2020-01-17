@@ -3,19 +3,34 @@
 </h1>
 
 <h2>
-  Text box
-</h2>
-<p id="text-box">
-  A new text should appear here...
-</p>
-
-<h2>
-  Lazy load script button
+  Lazy loaded text changer script
 </h2>
 <p>
   As soon as this button is clicked, an external script is loaded on the fly and the loaded
-  library is used to change the text of the text box.
+  library is used to change the text of the green text box.
 </p>
-<button type="button" id="button" (click)="loadScript()">
+
+<p id="text-box-text-changer" class="text-box green">
+  A new text should appear here...
+</p>
+
+<button type="button" id="textChangerButton" (click)="loadTextChangerAndChangeText()">
   Load script and change text
+</button>
+
+<h2>
+  Lazy loaded text appender script
+</h2>
+<p>
+  As soon as this button is clicked, an external script is loaded on the fly and the loaded
+  library is used to append text to the blue text box.
+</p>
+
+<p id="text-box-text-appender" class="text-box blue">
+  Text should be appended here...
+</p>
+
+
+<button type="button" id="textAppenderButton" (click)="loadTextAppenderAndChangeText()">
+  Load script and append text
 </button>
