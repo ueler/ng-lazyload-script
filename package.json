@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-all":  "ng build ng-lazyload-script && ng build ng-lazyload-script-example",
-    "test-all": "ng test ng-lazyload-script --watch=false && ng test ng-lazyload-script-example --watch=false",
+    "test-all": "ng test ng-lazyload-script --watch=false --browsers=ChromeHeadless && ng test ng-lazyload-script-example --watch=false --browsers=ChromeHeadless",
     "e2e-all": "ng e2e ng-lazyload-script-example"
   },
   "private": true,
