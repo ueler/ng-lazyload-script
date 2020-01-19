@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [12.x]
 
     steps:
       - uses: actions/checkout@v1
@@ -22,16 +22,16 @@ jobs:
       - name: npm install
         run: |
           npm ci
-          npm run build:ci 
+          npm run build:ci
 
       - name: build
         run: |
           npm run build-all
-          
+
       - name: test
         run: |
           npm run test-all
-                    
+
       - name: e2e
         run: |
           npm run e2e-all
