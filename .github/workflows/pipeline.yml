@@ -22,7 +22,6 @@ jobs:
       - name: npm install
         run: |
           npm ci
-          npm run build:ci
 
       - name: build
         run: |
