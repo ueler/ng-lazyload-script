@@ -48,6 +48,11 @@ this.ngLazyloadScriptService.loadScript('URL_TO_JAVASCRIPT_FILE').subscribe(() =
 ```
 
 ## Example
+### Stackblitz
+View an example app using the library:
+https://stackblitz.com/edit/angular-m4jjyu
+
+### Real-world example
 It can be used to load the Stripe Javscript API (https://stripe.com/docs/js):
 ```
 this.ngLazyloadScriptService.loadScript('https://js.stripe.com/v3/').subscribe(() => {

@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
 
   loadTextChangerAndChangeText() {
     // Load the external script on the fly
-    this.ngLazyScriptService.loadScript('http://ng-lazy-script.uapps.ch/text-changer-util.js').subscribe(() => {
+    this.ngLazyScriptService.loadScript('https://ng-lazy-script.uapps.ch/text-changer-util.js').subscribe(() => {
       const textChangerUtil = new TextChangerUtil('text-box-text-changer');
       textChangerUtil.changeText('A new text (set by text changer util which was lazy loaded)');
     });
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
 
   loadTextAppenderAndChangeText() {
     // Load the external script on the fly
-    this.ngLazyScriptService.loadScript('http://ng-lazy-script.uapps.ch/text-appender-util.js').subscribe(() => {
+    this.ngLazyScriptService.loadScript('https://ng-lazy-script.uapps.ch/text-appender-util.js').subscribe(() => {
       const textChangerUtil = new TextAppenderUtil('text-box-text-appender');
       textChangerUtil.appendText('appended text');
     });
